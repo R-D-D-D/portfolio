@@ -1,60 +1,61 @@
-<template>
-  <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+<template lang="pug">
+  v-app#app
+    v-container
+      v-row.justify-center
+        v-col(cols="12" md="10")
+          v-app-bar(
+            light
+            flat
+            color="white"
+          )
+            v-btn(to="/" text)
+              v-icon.ml-3(size="60px" color="#2c3e50") $vuetify.icons.custom
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
+            v-spacer
 
-      <v-spacer></v-spacer>
+            v-app-bar-nav-icon(@click="drawer = true" right)
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-content>
-      <HelloWorld/>
-    </v-content>
-  </v-app>
+    v-navigation-drawer(v-model='drawer' absolute temporary right :width="windowWidth * 0.3")
+      v-list
+        v-list-item-group(active-class="text--accent-4" )
+          v-list-item(to="/home")
+            v-list-item-title.display-1 Home
+    v-main
+      router-view
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import PageHeader from '@/components/PageHeader'
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    'page-header': PageHeader
   },
 
   data: () => ({
-    //
+    drawer: false
   }),
+
+  computed: {
+    windowWidth () {
+      return window.innerWidth
+    }
+  }
 };
 </script>
+
+<style>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.text-color {
+  color: #2c3e50 !important;
+}
+</style>
