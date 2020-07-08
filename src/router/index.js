@@ -3,8 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
-
-  const routes = [
+const routes = [
   {
     path: '/',
     name: 'Home',
@@ -13,7 +12,15 @@ Vue.use(VueRouter)
 ]
 
 const router = new VueRouter({
-  routes
+  routes: routes,
+  mode: 'history',
+  scrollBehavior: function(to) {
+    if (to.hash) {
+        return { selector: to.hash }
+    } else {
+        return { x: 0, y: 0 }
+    }
+  },
 })
 
 export default router
