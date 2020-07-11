@@ -73,7 +73,7 @@ export default {
     this.display = true
     setInterval(() => {
       this.display1 = true
-    }, 1000);
+    }, 600);
   }
 };
 </script>

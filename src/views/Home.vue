@@ -4,7 +4,7 @@
       transition(name="slide-fade")
         v-row.my-5.justify-center(v-if="display")
           v-col(cols="12")
-            h1.display-3.font-weight-bold Front-End Web Developer
+            h1.display-3.font-weight-bold Full-Stack Web Developer
 
       transition(name="slide-fade")
         v-row.justify-center(v-if="display1")
@@ -21,7 +21,7 @@
                     v-card-actions
                       v-btn(color='orange' text)
                         | View My CV
-                      v-btn(color='orange' text)
+                      v-btn(color='orange' text to="#contact")
                         | Contact Me
 
       transition(name="slide-fade")
@@ -63,12 +63,12 @@
                       p.py-2 - Intermediate: Git, NodeJS + Express
 
       transition(name="slide-fade")
-        v-row#experience.mb-5.justify-center.big-gap(v-if="display3")
+        v-row#experience.mb-5.justify-center.big-gap(v-if="display2")
           v-col(cols="12" md="10" lg="8")
             h1.display-3.font-weight-bold Experience
 
       transition(name="slide-fade")
-        div(v-if="display3")
+        div(v-if="display2")
           v-row.justify-center
             v-col(cols="12" md="10" lg="8")
               v-card(flat rounded outlined)
@@ -174,8 +174,7 @@ export default {
     return {
       display: false,
       display1: false,
-      display2: false,
-      display3: false
+      display2: false
     }
   },
 
@@ -198,9 +197,6 @@ export default {
     setInterval(() => {
       this.display2 = true
     }, 1000);
-    setInterval(() => {
-      this.display3 = true
-    }, 1300);
   }
 }
 </script>
