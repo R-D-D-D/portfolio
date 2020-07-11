@@ -19,7 +19,7 @@
                     v-card-text.text--primary 
                       div.display-1.text-color I'm Wang Runding, a self-motivated and independent web developer
                     v-card-actions
-                      v-btn(color='orange' text)
+                      v-btn(color='orange' text href="https://drive.google.com/file/d/1EpAmjqVwv0K7-bHPUfAsyuQpz59Ve4gi/view?usp=sharing")
                         | View My CV
                       v-btn(color='orange' text to="#contact")
                         | Contact Me
