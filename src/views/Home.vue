@@ -2,12 +2,12 @@
   .home
     v-container
       transition(name="slide-fade")
-        v-row.my-5.justify-center(v-if="display")
+        v-row.my-5.justify-center(v-show="display")
           v-col(cols="12")
             h1.display-3.font-weight-bold Full-Stack Web Developer
 
       transition(name="slide-fade")
-        v-row.justify-center(v-if="display1")
+        v-row.justify-center(v-show="display1")
           v-col(cols="12" md="10" lg="8")
             v-card
               v-row.align-center(no-gutters)
@@ -21,16 +21,16 @@
                     v-card-actions
                       v-btn(color='orange' text href="https://drive.google.com/file/d/1EpAmjqVwv0K7-bHPUfAsyuQpz59Ve4gi/view?usp=sharing")
                         | View My CV
-                      v-btn(color='orange' text to="#contact")
+                      v-btn(color='orange' text @click="goToBottom")
                         | Contact Me
 
       transition(name="slide-fade")
-        v-row#skill.mb-5.justify-center.big-gap(v-if="display2")
+        v-row#skill.mb-5.justify-center.big-gap(v-show="display1")
           v-col(cols="12" md="10" lg="8")
             h1.display-3.font-weight-bold Skill Set
 
       transition(name="slide-fade")
-        div(v-if="display2")
+        div(v-show="display1")
           v-row.justify-center
             v-col(cols="12" md="10" lg="8")
               v-card(flat rounded outlined)
@@ -63,12 +63,12 @@
                       p.py-2 - Intermediate: Git, NodeJS + Express
 
       transition(name="slide-fade")
-        v-row#experience.mb-5.justify-center.big-gap(v-if="display2")
+        v-row#experience.mb-5.justify-center.big-gap(v-show="display1")
           v-col(cols="12" md="10" lg="8")
             h1.display-3.font-weight-bold Experience
 
       transition(name="slide-fade")
-        div(v-if="display2")
+        div(v-show="display1")
           v-row.justify-center
             v-col(cols="12" md="10" lg="8")
               v-card(flat rounded outlined)
@@ -91,7 +91,9 @@
                       v-card-subtitle.px-0.py-2.text-h6.font-italic Mar 2020 - Present
                       p.py-2 - Worked on the NUS's website for the Orbital program
                       p.py-2 - Used Ruby on Rails and implemented new features like mentorship matching for students which involves updating the database schema and linking to the front end with email functionality
-          
+      
+      transition(name="slide-fade")
+        div(v-show="display1")
           v-row.mb-5.justify-center.big-gap
             v-col(cols="12")
               h1#recent-works.display-3.font-weight-bold My Recent Works
@@ -113,7 +115,7 @@
                   v-col
                     v-btn(width="52px" height="52px" icon href="https://github.com/R-D-D-D/rhythm-academy" target="_blank" color="#2c3e50")
                       v-icon(size="40px") mdi-github
-                    v-btn(width="52px" height="52px" icon href="http://ec2-13-229-108-113.ap-southeast-1.compute.amazonaws.com/#/" target="_blank" color="#2c3e50")
+                    v-btn(width="52px" height="52px" icon href="http://www.violian.com/" target="_blank" color="#2c3e50")
                       v-icon(size="40px") mdi-link-variant
 
             v-col(cols="12" md="6" lg="4")
@@ -173,12 +175,14 @@ export default {
   data () {
     return {
       display: false,
-      display1: false,
-      display2: false
+      display1: false
     }
   },
 
   methods: {
+    goToBottom () {
+      window.scrollTo(0,document.body.scrollHeight)
+    }
   },
 
   mounted: function () {
@@ -194,9 +198,6 @@ export default {
     setInterval(() => {
       this.display1 = true
     }, 600);
-    setInterval(() => {
-      this.display2 = true
-    }, 1000);
   }
 }
 </script>

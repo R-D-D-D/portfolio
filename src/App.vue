@@ -1,7 +1,7 @@
 <template lang="pug">
   v-app#app
     transition(name="slide-fade")
-      v-container(v-if="display")
+      v-container(v-show="display")
         v-row.justify-center
           v-col(cols="12" md="10")
             v-app-bar(
@@ -25,13 +25,13 @@
             v-list-item-title.display-1 Experience
           v-list-item(to="#recent-works")
             v-list-item-title.display-1 Projects
-          v-list-item(to="#contact")
+          v-list-item(@click="goToBottom")
             v-list-item-title.display-1 Contact
     v-main
       router-view
 
     transition(name="slide-fade")
-      v-footer.mt-16#contact(padless dark v-if="display1")
+      v-footer.mt-16#contact(padless dark v-show="display1")
         v-card.text-center(flat tile color="#2c3e50" width="100%")
           h1.display-2.font-weight-bold.pa-10 I would love to hear form you for potential collaborations, contact me at
           v-card-text
@@ -69,6 +69,13 @@ export default {
     display1: false
   }),
 
+  methods: {
+    goToBottom () {
+      window.scrollTo(0,document.body.scrollHeight)
+      this.drawer = false
+    }
+  },
+
   mounted: function () {
     this.display = true
     setInterval(() => {
@@ -105,11 +112,16 @@ export default {
 }
 .slide-fade-enter, .slide-fade-leave-to
 /* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translateY(10px);
+  transform: translateY(100px);
   opacity: 0;
 }
 
 html, body {
-    overflow-x:hidden;
+  overflow-x:hidden;
+}
+
+.hide {
+  opacity: 0;
+  offset-position: bottom 100px
 }
 </style>
