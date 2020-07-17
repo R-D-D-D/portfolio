@@ -102,9 +102,9 @@
               v-card.elevation-12(rounded)
                 v-carousel.img-border(cycle hide-delimiter-background show-arrows-on-hover height="auto")
                   v-carousel-item
-                    v-img(src="https://media.giphy.com/media/Qwnck25CaTuwB6VIoG/giphy.gif")
+                    v-img(src="https://media.giphy.com/media/Qwnck25CaTuwB6VIoG/giphy.gif" eager)
                   v-carousel-item
-                    v-img(src="https://media.giphy.com/media/J1d22ol5kv7OCPs7u7/giphy.gif")
+                    v-img(src="https://media.giphy.com/media/J1d22ol5kv7OCPs7u7/giphy.gif" eager)
                 v-row
                   v-col.pa-0(cols="12") 
                     v-card-text.display-1.text-color.pb-0 Rhythmy
@@ -120,7 +120,7 @@
 
             v-col(cols="12" md="6" lg="4")
               v-card.elevation-12(rounded)
-                v-img.img-border(:src="require('../assets/genus_website.png')")
+                v-img.img-border(:src="require('../assets/genus_website.png')" eager)
                 v-row
                   v-col.pa-0(cols="12") 
                     v-card-text.display-1.text-color.pb-0 NUS Guitar Ensemble
@@ -136,7 +136,7 @@
 
             v-col(cols="12" md="6" lg="4")
               v-card.elevation-12(rounded)
-                v-img.img-border(:src="require('../assets/music_academy.png')")
+                v-img.img-border(:src="require('../assets/music_academy.png')" eager)
                 v-row
                   v-col.pa-0(cols="12") 
                     v-card-text.display-1.text-color.pb-0 Music Academy
@@ -152,7 +152,7 @@
 
             v-col(cols="12" md="6" lg="4")
               v-card.elevation-12(rounded)
-                v-img.img-border(:src="require('../assets/audio-analysis.png')" width="100%")
+                v-img.img-border(:src="require('../assets/audio-analysis.png')" width="100%" eager)
                 v-row
                   v-col.pa-0(cols="12") 
                     v-card-text.display-1.text-color.pb-0 Audio Analysis
