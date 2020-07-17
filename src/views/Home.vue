@@ -7,30 +7,30 @@
             h1.display-3.font-weight-bold Full-Stack Web Developer
 
       transition(name="slide-fade")
-        v-row.justify-center(v-show="display1")
-          v-col(cols="12" md="10" lg="8")
-            v-card
-              v-row.align-center(no-gutters)
-                v-col.py-0(cols="12" md="6")
-                  v-img(:src="require('../assets/rd_photo.jpg')")
-                v-col.text-left.align-center(cols="12" md="6")
-                  .px-5
-                    v-card-title.text-color.break-word Hi there, nice to meet you
-                    v-card-text.text--primary 
-                      div.display-1.text-color I'm Wang Runding, a self-motivated and independent web developer
-                    v-card-actions
-                      v-btn(color='orange' text href="https://drive.google.com/file/d/1EpAmjqVwv0K7-bHPUfAsyuQpz59Ve4gi/view?usp=sharing")
-                        | View My CV
-                      v-btn(color='orange' text @click="goToBottom")
-                        | Contact Me
-
-      transition(name="slide-fade")
-        v-row#skill.mb-5.justify-center.big-gap(v-show="display1")
-          v-col(cols="12" md="10" lg="8")
-            h1.display-3.font-weight-bold Skill Set
-
+        div(v-show="display1")
+          v-row.justify-center
+            v-col(cols="12" md="10" lg="8")
+              v-card
+                v-row.align-center(no-gutters)
+                  v-col.py-0(cols="12" md="6")
+                    v-img(:src="require('../assets/rd_photo.jpg')" eager)
+                  v-col.text-left.align-center(cols="12" md="6")
+                    .px-5
+                      v-card-title.text-color.break-word Hi there, nice to meet you
+                      v-card-text.text--primary 
+                        div.display-1.text-color I'm Wang Runding, a self-motivated and independent web developer
+                      v-card-actions
+                        v-btn(color='orange' text href="https://drive.google.com/file/d/1EpAmjqVwv0K7-bHPUfAsyuQpz59Ve4gi/view?usp=sharing")
+                          | View My CV
+                        v-btn(color='orange' text @click="goToBottom")
+                          | Contact Me
+      
       transition(name="slide-fade")
         div(v-show="display1")
+          v-row#skill.mb-5.justify-center.big-gap(v-show="display1")
+            v-col(cols="12" md="10" lg="8")
+              h1.display-3.font-weight-bold Skill Set
+
           v-row.justify-center
             v-col(cols="12" md="10" lg="8")
               v-card(flat rounded outlined)
@@ -62,13 +62,10 @@
                       p.py-2 - Proficient: Ruby on Rails, Vue/Vuex
                       p.py-2 - Intermediate: Git, NodeJS + Express
 
-      transition(name="slide-fade")
-        v-row#experience.mb-5.justify-center.big-gap(v-show="display1")
-          v-col(cols="12" md="10" lg="8")
-            h1.display-3.font-weight-bold Experience
-
-      transition(name="slide-fade")
-        div(v-show="display1")
+          v-row#experience.mb-5.justify-center.big-gap
+            v-col(cols="12" md="10" lg="8")
+              h1.display-3.font-weight-bold Experience
+            
           v-row.justify-center
             v-col(cols="12" md="10" lg="8")
               v-card(flat rounded outlined)
@@ -91,9 +88,7 @@
                       v-card-subtitle.px-0.py-2.text-h6.font-italic Mar 2020 - Present
                       p.py-2 - Worked on the NUS's website for the Orbital program
                       p.py-2 - Used Ruby on Rails and implemented new features like mentorship matching for students which involves updating the database schema and linking to the front end with email functionality
-      
-      transition(name="slide-fade")
-        div(v-show="display1")
+
           v-row.mb-5.justify-center.big-gap
             v-col(cols="12")
               h1#recent-works.display-3.font-weight-bold My Recent Works
@@ -107,7 +102,7 @@
                     v-img(src="https://media.giphy.com/media/J1d22ol5kv7OCPs7u7/giphy.gif" eager)
                 v-row
                   v-col.pa-0(cols="12") 
-                    v-card-text.display-1.text-color.pb-0 Rhythmy
+                    v-card-text.display-1.text-color.pb-0 Violian
                     div.px-8.pt-2.text-left
                       p.subtitle.text-h6.font-italic My startup project
                       p.py-2 Aims to facilitate online music tutoring by providing tutors with the ability to customize rhythm patterns for students to practice and overlay scores over their video demo 
@@ -126,7 +121,7 @@
                     v-card-text.display-1.text-color.pb-0 NUS Guitar Ensemble
                     div.px-8.pt-2.text-left
                       p.subtitle.text-h6.font-italic Website for my CCA
-                      p.py-2 A website build for my cca using rails. It has basic album features and allows admins to edit the website's content without doing code.
+                      p.py-2 A website build for my cca using rails. It has basic album features and allows admin to edit the website's content without having to code anything.
                 v-row
                   v-col
                     v-btn(width="52px" height="52px" icon href="https://github.com/R-D-D-D/GENUS" target="_blank" color="#2c3e50")

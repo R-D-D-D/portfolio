@@ -1,20 +1,21 @@
 <template lang="pug">
   v-app#app
     transition(name="slide-fade")
-      v-container(v-show="display")
-        v-row.justify-center
-          v-col(cols="12" md="10")
-            v-app-bar(
-              light
-              flat
-              color="white"
-            )
-              v-btn#logo.px-0.mx-0(to="/" text)
-                v-icon.ml-3(size="60px" color="#2c3e50") $vuetify.icons.custom
+      div(v-show="display")
+        v-container
+          v-row.justify-center
+            v-col(cols="12" md="10")
+              v-app-bar(
+                light
+                flat
+                color="white"
+              )
+                v-btn#logo.px-0.mx-0(to="/" text)
+                  v-icon.ml-3(size="60px" color="#2c3e50") $vuetify.icons.custom
 
-              v-spacer
+                v-spacer
 
-              v-app-bar-nav-icon(@click="drawer = true" right)
+                v-app-bar-nav-icon(@click="drawer = true" right)
 
     v-navigation-drawer(v-model='drawer' absolute temporary right width="60%")
       v-list
@@ -92,8 +93,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  width: 100% !important;
-  margin: 0 !important;
 }
 
 .text-color {
@@ -117,11 +116,6 @@ export default {
 }
 
 html, body {
-  overflow-x:hidden;
-}
-
-.hide {
-  opacity: 0;
-  offset-position: bottom 100px
+  /* overflow-x:hidden; */
 }
 </style>
