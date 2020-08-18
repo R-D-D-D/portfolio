@@ -4,12 +4,12 @@
       transition(name="slide-fade")
         v-row.my-5.justify-center(v-show="display")
           v-col(cols="12")
-            h1.display-3.font-weight-bold Full-Stack Web Developer
+            h1#recent-works.font-weight-black(style="font-size:4rem;") Full-Stack Web Developer
 
       transition(name="slide-fade")
         div(v-show="display1")
           v-row.justify-center
-            v-col(cols="12" md="10" lg="8")
+            v-col(cols="12" lg="10" xl="8")
               v-card
                 v-row.align-center(no-gutters)
                   v-col.py-0(cols="12" md="6")
@@ -20,7 +20,7 @@
                       v-card-text.text--primary 
                         div.display-1.text-color I'm Wang Runding, a self-motivated and independent web developer
                       v-card-actions
-                        v-btn(color='orange' text href="https://drive.google.com/file/d/1EpAmjqVwv0K7-bHPUfAsyuQpz59Ve4gi/view?usp=sharing")
+                        v-btn(color='orange' text href="https://drive.google.com/file/d/1a-BNL80qB4i6_hFb66MK7dZcNjnu1qAy/view?usp=sharing")
                           | View My CV
                         v-btn(color='orange' text @click="goToBottom")
                           | Contact Me
@@ -28,22 +28,22 @@
       transition(name="slide-fade")
         div(v-show="display1")
           v-row#skill.mb-5.justify-center.big-gap(v-show="display1")
-            v-col(cols="12" md="10" lg="8")
-              h1.display-3.font-weight-bold Skill Set
+            v-col(cols="12")
+              h1.font-weight-black(style="font-size:3.6rem;") Skill Set
 
           v-row.justify-center
-            v-col(cols="12" md="10" lg="8")
+            v-col(cols="12" lg="10" xl="8")
               v-card(flat rounded outlined)
                 v-row(no-gutters)
-                  v-col.pa-0.education(cols="12" md="6")
-                    v-card-text.display-1.text-color.font-weight-bold Marketing / Design
-                    p I picked up photoshop in Junior College for project work and further went on to assume the role of publicity secretary. 
-                    .text-left.pl-5
-                      .text-h5.text-color.font-weight-bold Adobe Softwares
-                      v-card-subtitle.px-0.text-h6.font-italic.py-2 Publicity Secretary of NUS Guitar Ensemble
-                      p.py-2 - Intermediate: Photoshop, Premiere pro, iMovie.
-                      p.py-2 - Basic - Illustrator.
-                      p.py-2 - A few demos:
+                  v-col.pb-4.education(cols="12" md="6")
+                    div.font-weight-bold.py-6.text-color(style="font-size:2.4rem;") Designer
+                    div.px-4.px-md-8.text-left I am very interested in photo, video editing and logo design. Although I did not properly learn it, I explore some of the adobe softwares on my own. I use Illustrator to do basic word art like this web page. I used Photoshop and iMovie for marketing materials when I was the publicity secretary. The process was fun.
+                    hr.mx-auto.my-4(style="border:1px solid black; width:16px;")
+                    .text-left.px-4.px-md-8
+                      .text-color.font-weight-bold(style="font-size:1.6rem;") Adobe Softwares
+                      div.py-2 - Intermediate: Photoshop, Premiere pro, iMovie.
+                      div.py-2 - Basic - Illustrator.
+                      div.py-2 - A few demos:
                       v-btn(icon href="https://www.instagram.com/p/B3wYct7lJYV/?utm_source=ig_web_copy_link" target="_blank" color="#2c3e50")
                         v-icon mdi-instagram
                       v-btn(icon href="https://www.instagram.com/p/B3onxFFFDTe/?utm_source=ig_web_copy_link" target="_blank" color="#2c3e50")
@@ -51,112 +51,260 @@
                       v-btn(icon href="https://www.instagram.com/tv/B8F-KbtFGHN/?utm_source=ig_web_button_share_sheet" target="_blank" color="#2c3e50")
                         v-icon mdi-youtube
 
-                  v-col.pa-0(cols="12" md="6")
-                    v-card-text.display-1.text-color.font-weight-bold Coding
-                    .text-left.pl-5
-                      .text-h5.text-color.font-weight-bold Languages
+                  v-col.pb-4(cols="12" md="6")
+                    div.font-weight-bold.py-6.text-color(style="font-size:2.4rem;") Developer
+                    div.px-4.px-md-8.text-left I like to build useful softwares that solves problem around me. Aside from school work, I have done quite a few personal projects which allow me to be familiarize with popular frameworks like Rails, Vuejs and Nodejs. From these experience I lauched my own startup Violian, a web app done using Nodejs and Vuejs that involve some video processing.
+                    hr.mx-auto.my-4(style="border:1px solid black; width:16px;")
+                    .text-left.px-4.px-md-8
+                      .text-color.font-weight-bold(style="font-size:1.6rem;") Languages
                       p.py-2 - Proficient: Javascript, Java, HTML, CSS
                       p.py-2 - Intermediate: Python
                       p.py-2 - Basic: Ruby, C#, C
+                    hr.mx-auto.my-4(style="border:1px solid black; width:16px;")
+                    .text-left.px-4.px-md-8
                       .text-h5.text-color.font-weight-bold Frameworks
                       p.py-2 - Proficient: Ruby on Rails, Vue/Vuex
                       p.py-2 - Intermediate: Git, NodeJS + Express
 
           v-row#experience.mb-5.justify-center.big-gap
-            v-col(cols="12" md="10" lg="8")
-              h1.display-3.font-weight-bold Experience
+            v-col(cols="12")
+              h1.font-weight-black(style="font-size:3rem;") Experience
             
           v-row.justify-center
-            v-col(cols="12" md="10" lg="8")
+            v-col(cols="12" lg="10" xl="8")
               v-card(flat rounded outlined)
                 v-row(no-gutters)
-                  v-col.pa-0.education(cols="12" md="6")
-                    v-card-text.display-1.text-color.font-weight-bold Education
-                    .text-left.pl-5
-                      .text-h5.text-color.font-weight-bold National University of Singapore
+                  v-col.education(cols="12" md="6")
+                    div.font-weight-bold.py-6.text-color(style="font-size:2.4rem;") Education
+                    .text-left.px-4.px-md-8
+                      .text-color.font-weight-bold(style="font-size:1.6rem;") National University of Singapore
                       v-card-subtitle.px-0.text-h6.font-italic.py-2 July 2018 - present
                       p.py-2 - Currently pursuing a Bachelor of Computing (Computer Science) (Honours) with specialization in Software Engineering and AI
                       p.py-2 - Held the role of publicity in my CCA NUS Guitar Ensemble, managed instagram, facebook and youtube accounts
-                  v-col.pa-0(cols="12" md="6")
-                    v-card-text.display-1.text-color.font-weight-bold Work
-                    .text-left.pl-5.mb-5
-                      .text-h5.text-color.font-weight-bold Dateideas - Software Engineer Intern
+                  v-col.pb-4(cols="12" md="6")
+                    div.font-weight-bold.py-6.text-color(style="font-size:2.4rem;") Work
+                    .text-left.px-4.px-md-8
+                      .text-color.font-weight-bold(style="font-size:1.6rem;") Dateideas - Software Engineer Intern
                       v-card-subtitle.px-0.py-2.text-h6.font-italic Jan 2020 - May 2020
                       p.py-2 - Worked as front end software engineer to implement a full album feature for the company
                       p.py-2 - Used vue, vuex and vue router to build authentication, album management and photo uploading front end api
-                      .text-h5.text-color.font-weight-bold NUS Skylab - Software Engineer Part-Time
+                    hr.mx-auto.my-4(style="border:1px solid black; width:16px;")
+                    .text-left.px-4.px-md-8
+                      .text-color.font-weight-bold(style="font-size:1.6rem;") NUS Skylab - Software Engineer Part-Time
                       v-card-subtitle.px-0.py-2.text-h6.font-italic Mar 2020 - Present
                       p.py-2 - Worked on the NUS's website for the Orbital program
                       p.py-2 - Used Ruby on Rails and implemented new features like mentorship matching for students which involves updating the database schema and linking to the front end with email functionality
 
           v-row.mb-5.justify-center.big-gap
             v-col(cols="12")
-              h1#recent-works.display-3.font-weight-bold My Recent Works
-          v-row.justify-center
-            v-col(cols="12" md="6" lg="4")
-              v-card.elevation-12(rounded)
-                v-carousel.img-border(cycle hide-delimiter-background show-arrows-on-hover height="auto")
-                  v-carousel-item
-                    v-img(src="https://media.giphy.com/media/Qwnck25CaTuwB6VIoG/giphy.gif" eager)
-                  v-carousel-item
-                    v-img(src="https://media.giphy.com/media/J1d22ol5kv7OCPs7u7/giphy.gif" eager)
-                v-row
-                  v-col.pa-0(cols="12") 
-                    v-card-text.display-1.text-color.pb-0 Violian
-                    div.px-8.pt-2.text-left
-                      p.subtitle.text-h6.font-italic My startup project
-                      p.py-2 Aims to facilitate online music tutoring by providing tutors with the ability to customize rhythm patterns for students to practice and overlay scores over their video demo 
-                v-row
-                  v-col
-                    v-btn(width="52px" height="52px" icon href="https://github.com/R-D-D-D/rhythm-academy" target="_blank" color="#2c3e50")
-                      v-icon(size="40px") mdi-github
-                    v-btn(width="52px" height="52px" icon href="http://www.violian.com/" target="_blank" color="#2c3e50")
-                      v-icon(size="40px") mdi-link-variant
+              h1#recent-works.font-weight-black(style="font-size:3rem;") My Recent Works
 
-            v-col(cols="12" md="6" lg="4")
-              v-card.elevation-12(rounded)
-                v-img.img-border(:src="require('../assets/genus_website.png')" eager)
-                v-row
-                  v-col.pa-0(cols="12") 
-                    v-card-text.display-1.text-color.pb-0 NUS Guitar Ensemble
-                    div.px-8.pt-2.text-left
-                      p.subtitle.text-h6.font-italic Website for my CCA
-                      p.py-2 A website build for my cca using rails. It has basic album features and allows admin to edit the website's content without having to code anything.
-                v-row
-                  v-col
-                    v-btn(width="52px" height="52px" icon href="https://github.com/R-D-D-D/GENUS" target="_blank" color="#2c3e50")
-                      v-icon(size="40px") mdi-github
-                    v-btn(width="52px" height="52px" icon href="https://www.nusguitarensemble.com" target="_blank" color="#2c3e50")
-                      v-icon(size="40px") mdi-link-variant
+          //- computer section
+          //- violian
+          v-row.justify-center.pt-8(v-if="!isPhone")
+            v-col(cols="12" lg="10" xl="8")
+              v-sheet.elevation-10.card(style="position:relative; height:0; padding-bottom:31.25%;" ref="cardWrapper")
+                img.elevation-10(:src="require('../assets/violian.jpg')" width="50%" :style="imgStyle")
+                div(style="position:absolute; bottom:20px; left:calc(50% + 44px);")
+                  v-btn(outlined href="https://github.com/R-D-D-D/violian" target="_blank" color="#2c3e50")
+                    v-icon(left size="24") mdi-github
+                    | Github
+                  v-btn.ml-4(outlined href="https://github.com/R-D-D-D/violian" target="_blank" color="#2c3e50")
+                    v-icon(left size="22") mdi-link-variant
+                    | Visit Site
+                v-container.px-6
+                  v-row(no-gutters)
+                    v-col.text-left(cols="6" offset="6" style="padding-left:44px; position:relative;")
+                      img(width="30px" height="30px" :src="require('../assets/Node.js_logo.svg')" style="top:5px; right:0; position:absolute;")
+                      h1.font-weight-black(style="font-size: 1.6rem;") Violian
+                      div(style="border-bottom: 2px solid #BDBDBD; width:100%;")
+                      div.pt-2.font-weight-black.alignleft(style="color: #616161;") Startup
+                      div.pt-2.font-weight-black.alignright(style="color: #616161;") May 2020
+                      div(style="clear:both;")
+                      div.font-weight-black(style="color: #616161;") NodeJS &#183; Vue.js &#183; AWS
+                      div.font-weight-medium.pt-2 A web app that delivers quality music video courses. It has special features tailored to facilitate the process such as overlaying score on video and customizing scores. 
 
-            v-col(cols="12" md="6" lg="4")
-              v-card.elevation-12(rounded)
-                v-img.img-border(:src="require('../assets/music_academy.png')" eager)
-                v-row
-                  v-col.pa-0(cols="12") 
-                    v-card-text.display-1.text-color.pb-0 Music Academy
-                    div.px-8.pt-2.text-left
-                      p.subtitle.text-h6.font-italic Orbital
-                      p.py-2 A website to sell online music courses which encompass a variety of features. It includes payment system, subscribing and rating system.
-                v-row
-                  v-col
-                    v-btn(width="52px" height="52px" icon href="https://github.com/R-D-D-D/orbital_niibori" target="_blank" color="#2c3e50")
-                      v-icon(size="40px") mdi-github
-                    v-btn(width="52px" height="52px" icon href="https://music-academy-orbital.herokuapp.com/" target="_blank" color="#2c3e50")
-                      v-icon(size="40px") mdi-link-variant
+          //- rhythm master
+          v-row.justify-center.pt-8(v-if="!isPhone")
+            v-col(cols="12" lg="10" xl="8")
+              v-sheet.elevation-10.card(style="position:relative; height:0; padding-bottom:31.25%;")
+                img.elevation-10(:src="require('../assets/rhythm_master.jpg')" width="50%" :style="imgStyle")
+                div(style="position:absolute; bottom:20px; left:calc(50% + 44px);")
+                  v-btn(outlined href="https://github.com/R-D-D-D/Ground-Zero/tree/master/waveform_processing" target="_blank" color="#2c3e50")
+                    v-icon(left size="24") mdi-github
+                    | Github
+                v-container.px-6
+                  v-row(no-gutters)
+                    v-col.text-left(cols="6" offset="6" style="padding-left:44px; position:relative")
+                      img(width="30px" height="30px" :src="require('../assets/C_Sharp_logo.svg')" style="top:2px; right:0; position:absolute;")
+                      h1.font-weight-black(style="font-size: 1.6rem;") Rhythm Master
+                      div(style="border-bottom: 2px solid #BDBDBD; width:100%;")
+                      div.pt-2.font-weight-black.alignleft(style="color: #616161;") Personal Project
+                      div.pt-2.font-weight-black.alignright(style="color: #616161;") May 2020
+                      div(style="clear:both;")
+                      div.font-weight-black(style="color: #616161;") .NET &#183; C#
+                      div.font-weight-medium.pt-2 A windows form app to programatically analyse a piece of rhythm played by student against the solution
 
-            v-col(cols="12" md="6" lg="4")
+          //- dateideas intern
+          v-row.justify-center.pt-8(v-if="!isPhone")
+            v-col(cols="12" lg="10" xl="8")
+              v-sheet.elevation-10.card(style="position:relative; height:0; padding-bottom:31.25%;")
+                img.elevation-10(:src="require('../assets/dateideas.jpg')" width="50%" :style="imgStyle")
+                div(style="position:absolute; bottom:20px; left:calc(50% + 44px);")
+                  v-btn(outlined href="https://gitlab.com/R-D-D-D/mem" target="_blank" color="#2c3e50")
+                    v-icon(left size="24") mdi-gitlab
+                    | Gitlab
+                v-container.px-6
+                  v-row(no-gutters)
+                    v-col.text-left(cols="6" offset="6" style="padding-left:44px; position:relative;")
+                      img(width="30px" height="30px" :src="require('../assets/Vue.js_Logo_2.svg')" style="top:2px; right:0; position:absolute;")
+                      h1.font-weight-black(style="font-size: 1.6rem;") Dateideas
+                      div(style="border-bottom: 2px solid #BDBDBD; width:100%;")
+                      div.pt-2.font-weight-black.alignleft(style="color: #616161;") Intern Project
+                      div.pt-2.font-weight-black.alignright(style="color: #616161;") Mar 2020
+                      div(style="clear:both;")
+                      div.font-weight-black(style="color: #616161;") Vue.js
+                      div.font-weight-medium.pt-2 My intern project. It uses Vue as front end framework and links to the backend api to form an album feature for couples.
+          
+          //- genus website
+          v-row.justify-center.pt-8(v-if="!isPhone")
+            v-col(cols="12" lg="10" xl="8")
+              v-sheet.elevation-10.card(style="position:relative; height:0; padding-bottom:31.25%;")
+                img.elevation-10(:src="require('../assets/nusguitarensemble.jpg')" width="50%" :style="imgStyle")
+                div(style="position:absolute; bottom:20px; left:calc(50% + 44px);")
+                  v-btn(outlined href="https://github.com/R-D-D-D/GENUS" target="_blank" color="#2c3e50")
+                    v-icon(left size="24") mdi-github
+                    | Github
+                  v-btn.ml-4(outlined href="https://www.nusguitarensemble.com" target="_blank" color="#2c3e50")
+                    v-icon(left size="22") mdi-link-variant
+                    | Visit Site
+                v-container.px-6
+                  v-row(no-gutters)
+                    v-col.text-left(cols="6" offset="6" style="padding-left:44px; position:relative;")
+                      img(width="60px" height="60px" :src="require('../assets/Ruby_On_Rails_Logo.svg')" style="top:-12px; right:0; position:absolute;")
+                      h1.font-weight-black(style="font-size: 1.6rem;") NUS Guitar Ensemble
+                      div(style="border-bottom: 2px solid #BDBDBD; width:100%;")
+                      div.pt-2.font-weight-black.alignleft(style="color: #616161;") Personal Project
+                      div.pt-2.font-weight-black.alignright(style="color: #616161;") Aug 2019
+                      div(style="clear:both;")
+                      div.font-weight-black(style="color: #616161;") Ruby on Rails &#183; Heroku
+                      div.font-weight-medium.pt-2 A website build for my cca using rails. It has basic album features. It allows admins to edit html content for easier maintenance.
+          
+          //- music academy
+          v-row.justify-center.pt-8(v-if="!isPhone")
+            v-col(cols="12" lg="10" xl="8")
+              v-sheet.elevation-10.card(style="position:relative; height:0; padding-bottom:31.25%;")
+                img.elevation-10(:src="require('../assets/music_academy.jpg')" width="50%" :style="imgStyle")
+                div(style="position:absolute; bottom:20px; left:calc(50% + 44px);")
+                  v-btn(outlined href="https://github.com/R-D-D-D/orbital_niibori" target="_blank" color="#2c3e50")
+                    v-icon(left size="24") mdi-github
+                    | Github
+                  v-btn.ml-4(outlined href="https://music-academy-orbital.herokuapp.com/" target="_blank" color="#2c3e50")
+                    v-icon(left size="22") mdi-link-variant
+                    | Visit Site
+                v-container.px-6
+                  v-row(no-gutters)
+                    v-col.text-left(cols="6" offset="6" style="padding-left:44px; position:relative;")
+                      img(width="60px" height="60px" :src="require('../assets/Ruby_On_Rails_Logo.svg')" style="top:-12px; right:0; position:absolute;")
+                      h1.font-weight-black(style="font-size: 1.6rem;") Music Academy
+                      div(style="border-bottom: 2px solid #BDBDBD; width:100%;")
+                      div.pt-2.font-weight-black.alignleft(style="color: #616161;") Orbital
+                      div.pt-2.font-weight-black.alignright(style="color: #616161;") May 2019
+                      div(style="clear:both;")
+                      div.font-weight-black(style="color: #616161;") Ruby on Rails &#183; Heroku
+                      div.font-weight-medium.pt-2 A website to sell online music courses which encompass a variety of features. It includes payment system, subscribing forum and rating system.
+
+          //- begin of phone section
+          v-row.justify-center(v-if="isPhone")
+            //- violian
+            v-col(cols="12")
               v-card.elevation-12(rounded)
-                v-img.img-border(:src="require('../assets/audio-analysis.png')" width="100%" eager)
-                v-row
-                  v-col.pa-0(cols="12") 
-                    v-card-text.display-1.text-color.pb-0 Audio Analysis
-                    div.px-8.pt-2.text-left
-                      p.py-2 A windows form app to programatically analyse a piece of rhythm played by student against the solution
-                v-row
-                  v-col
-                    v-btn(width="52px" height="52px" icon href="https://github.com/R-D-D-D/Ground-Zero/tree/master/waveform_processing" target="_blank" color="#2c3e50")
-                      v-icon(size="40px") mdi-github
+                v-img.img-border(:src="require('../assets/violian.jpg')" eager)
+                v-container.py-0
+                  v-row
+                    v-col(cols="12") 
+                      h1.font-weight-black(style="font-size: 1.8rem;") Violian
+                      div.font-weight-black(style="color: #616161;") NodeJS &#183; Vue.js &#183; AWS
+                      div.font-weight-medium.pt-2 A web app that delivers quality music video courses. It has special features tailored to facilitate the process such as overlaying score on video and customizing scores. 
+                  v-row
+                    v-col
+                      v-btn(outlined href="https://github.com/R-D-D-D/violian" target="_blank" color="#2c3e50")
+                        v-icon(left size="24") mdi-github
+                        | Github
+                      v-btn.ml-4(outlined href="https://github.com/R-D-D-D/violian" target="_blank" color="#2c3e50")
+                        v-icon(left size="22") mdi-link-variant
+                        | Visit Site
+
+            //- rhythm master
+            v-col(cols="12")
+              v-card.elevation-12(rounded)
+                v-img.img-border(:src="require('../assets/rhythm_master.jpg')" eager)
+                v-container.py-0
+                  v-row
+                    v-col(cols="12") 
+                      h1.font-weight-black(style="font-size: 1.8rem;") Rhythm Master
+                      div.font-weight-black(style="color: #616161;") .NET &#183; C#
+                      div.font-weight-medium.pt-2 A windows form app to programatically analyse a piece of rhythm played by student against the solution
+                  v-row
+                    v-col
+                      v-btn(outlined href="https://github.com/R-D-D-D/Ground-Zero/tree/master/waveform_processing" target="_blank" color="#2c3e50")
+                        v-icon(left size="24") mdi-github
+                        | Github
+            
+            //- dateideas
+            v-col(cols="12")
+              v-card.elevation-12(rounded)
+                v-img.img-border(:src="require('../assets/dateideas.jpg')" eager)
+                v-container.py-0
+                  v-row
+                    v-col(cols="12") 
+                      h1.font-weight-black(style="font-size: 1.8rem;") Dateideas
+                      div.font-weight-black(style="color: #616161;") Vue.js
+                      div.font-weight-medium.pt-2 My intern project. It uses Vue as front end framework and links to the backend api to form an album feature for couples.
+                  v-row
+                    v-col
+                      v-btn(outlined href="https://gitlab.com/R-D-D-D/mem" target="_blank" color="#2c3e50")
+                        v-icon(left size="24") mdi-gitlab
+                        | Gitlab
+
+            //- genus
+            v-col(cols="12")
+              v-card.elevation-12(rounded)
+                v-img.img-border(:src="require('../assets/nusguitarensemble.jpg')" eager)
+                v-container.py-0
+                  v-row
+                    v-col(cols="12") 
+                      h1.font-weight-black(style="font-size: 1.8rem;") NUS Guitar Ensemble
+                      div.font-weight-black(style="color: #616161;") Ruby on Rails &#183; Heroku
+                      div.font-weight-medium.pt-2 A website build for my cca using rails. It has basic album features. It allows admins to edit html content for easier maintenance.
+                  v-row
+                    v-col
+                      v-btn(outlined href="https://github.com/R-D-D-D/GENUS" target="_blank" color="#2c3e50")
+                        v-icon(left size="24") mdi-github
+                        | Github
+                      v-btn.ml-4(outlined href="https://www.nusguitarensemble.com" target="_blank" color="#2c3e50")
+                        v-icon(left size="22") mdi-link-variant
+                        | Visit Site
+            
+            //- music academy
+            v-col(cols="12")
+              v-card.elevation-12(rounded)
+                v-img.img-border(:src="require('../assets/music_academy.jpg')" eager)
+                v-container.py-0
+                  v-row
+                    v-col(cols="12") 
+                      h1.font-weight-black(style="font-size: 1.8rem;") Violian
+                      div.font-weight-black(style="color: #616161;") Ruby on Rails &#183; Heroku
+                      div.font-weight-medium.pt-2 A website to sell online music courses which encompass a variety of features. It includes payment system, subscribing forum and rating system.
+                  v-row
+                    v-col
+                      v-btn(outlined href="https://github.com/R-D-D-D/orbital_niibori" target="_blank" color="#2c3e50")
+                        v-icon(left size="24") mdi-github
+                        | Github
+                      v-btn.ml-4(outlined href="https://music-academy-orbital.herokuapp.com/" target="_blank" color="#2c3e50")
+                        v-icon(left size="22") mdi-link-variant
+                        | Visit Site
+                      
           
 
 
@@ -170,7 +318,19 @@ export default {
   data () {
     return {
       display: false,
-      display1: false
+      display1: false,
+      hack: 0,
+      imgStyle: {
+        position: 'absolute',
+        left: '20px',
+        top: '-20px'
+      }
+    }
+  },
+
+  computed: {
+    isPhone () {
+      return this.$vuetify.breakpoint.name == 'xs' || this.$vuetify.breakpoint.name == 'sm'
     }
   },
 
@@ -182,16 +342,19 @@ export default {
 
   mounted: function () {
     var reportWindowSize = () => {
-      console.log(this.$vuetify.breakpoint)
+      this.hack++
+      console.log(this.$vuetify.breakpoint.name)
     }
 
     window.onresize = reportWindowSize;
 
-    setInterval(() => {
+    setTimeout(() => {
       this.display = true
     }, 300);
-    setInterval(() => {
+    setTimeout(async () => {
       this.display1 = true
+      await this.$nextTick()
+      this.hack++
     }, 600);
   }
 }
@@ -207,7 +370,7 @@ export default {
 }
 
 .big-gap {
-  margin-top: 16rem;
+  margin-top: 10rem;
 }
 
 p {
@@ -226,4 +389,41 @@ p {
   letter-spacing: 0.0125em !important;
   font-family: "Roboto", sans-serif !important;
 }
+
+.project-info {
+  text-align: left;
+  color: #616161;
+  position:absolute; 
+  bottom:0; 
+  left:30px;
+  font-size:18px;
+}
+
+.card::before,
+.card::after {
+  content: '';
+  position: absolute;
+  border: 1px solid #BDBDBD;
+}
+
+.card::before {
+  top: 20px;
+  left: 10px;
+  bottom: 10px;
+}
+
+.card::after {
+  left: 10px;
+  right: 50%;
+  bottom: 10px;
+}
+
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
+
+
 </style>

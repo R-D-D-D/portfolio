@@ -4,14 +4,14 @@
       div(v-show="display")
         v-container
           v-row.justify-center
-            v-col(cols="12" md="10")
+            v-col(cols="12" lg="10" xl="8")
               v-app-bar(
                 light
                 flat
                 color="white"
               )
                 v-btn#logo.px-0.mx-0(to="/" text)
-                  v-icon.ml-3(size="60px" color="#2c3e50") $vuetify.icons.custom
+                  v-icon(size="60px" color="#2A354F") $vuetify.icons.custom
 
                 v-spacer
 
@@ -33,21 +33,25 @@
 
     transition(name="slide-fade")
       v-footer.mt-16#contact(padless dark v-show="display1")
-        v-card.text-center(flat tile color="#2c3e50" width="100%")
-          h1.display-2.font-weight-bold.pa-10 I would love to hear form you for potential collaborations, contact me at
-          v-card-text
-            v-btn.mx-4.text--white(x-large icon href="https://www.linkedin.com/in/runding-wang/" target="_blank")
-              v-icon(x-large) mdi-linkedin
-            | RUNDING WANG
-            v-btn.mx-4(x-large icon href="mailto:wangrunding@gmail.com")
-              v-icon(x-large) mdi-email
-            | wangrunding@gmail.com
-            v-btn.mx-4(x-large icon href="https://github.com/R-D-D-D" target="_blank")
-              v-icon(x-large) mdi-github
-            | R-D-D-D
-            v-btn.mx-4(x-large icon href="https://github.com/R-D-D-D" target="_blank")
-              v-icon(x-large) mdi-phone
-            | +65 9879 1096
+        v-card.text-center(flat tile color="#1D2640" width="100%")
+          h1.display-2.font-weight-bold.py-10.px-sm-16.px-10(style="word-break:normal;") I would love to hear form you for potential collaborations, contact me at
+          v-row
+            v-col(cols="12" md="3")
+              v-btn.text--white(x-large icon href="https://www.linkedin.com/in/runding-wang/" target="_blank")
+                v-icon(x-large) mdi-linkedin
+              | RUNDING WANG
+            v-col(cols="12" md="3")
+              v-btn(x-large icon href="mailto:wangrunding@gmail.com")
+                v-icon(x-large) mdi-email
+              | wangrunding@gmail.com
+            v-col(cols="12" md="3")
+              v-btn(large icon href="https://github.com/R-D-D-D" target="_blank")
+                v-icon(x-large) mdi-github
+              | R-D-D-D
+            v-col(cols="12" md="3")
+              v-btn(x-large icon href="https://github.com/R-D-D-D" target="_blank")
+                v-icon(x-large) mdi-phone
+              | +65 9879 1096
           v-divider
           v-card-text
             |	&copy; Wang Runding {{ new Date().getFullYear() }}
@@ -79,7 +83,7 @@ export default {
 
   mounted: function () {
     this.display = true
-    setInterval(() => {
+    setTimeout(() => {
       this.display1 = true
     }, 600);
   }
@@ -88,15 +92,15 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #2A354F;
 }
 
 .text-color {
-  color: #2c3e50 !important;
+  color: #2A354F !important;
 }
 
 #logo::before {
