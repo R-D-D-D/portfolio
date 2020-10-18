@@ -22,8 +22,10 @@
         v-list-item-group(active-class="text--accent-4" )
           v-list-item(to="#skill")
             v-list-item-title.display-1 Skill Set
-          v-list-item(to="#experience")
-            v-list-item-title.display-1 Experience
+          v-list-item(to="#education")
+            v-list-item-title.display-1 Education
+          v-list-item(to="#work")
+            v-list-item-title.display-1 Work Experience
           v-list-item(to="#recent-works")
             v-list-item-title.display-1 Projects
           v-list-item(@click="goToBottom")

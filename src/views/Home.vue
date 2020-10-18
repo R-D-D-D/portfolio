@@ -9,12 +9,10 @@
       transition(name="slide-fade")
         div(v-show="display1")
           v-row.justify-center
-            v-col(cols="12" lg="10" xl="8")
+            v-col(cols="12" lg="8")
               v-card
                 v-row.align-center(no-gutters)
-                  v-col.py-0(cols="12" md="6")
-                    v-img(:src="require('../assets/rd_photo.jpg')" eager)
-                  v-col.text-left.align-center(cols="12" md="6")
+                  v-col.text-left.align-center(cols="12" sm="6")
                     .px-5
                       v-card-title.text-color.break-word Hi there, nice to meet you
                       v-card-text.text--primary 
@@ -24,6 +22,8 @@
                           | View My CV
                         v-btn(color='orange' text @click="goToBottom")
                           | Contact Me
+                  v-col.py-0(cols="0" sm="6")
+                    v-img(:src="require('../assets/portrait_short.jpg')" eager)
       
       transition(name="slide-fade")
         div(v-show="display1")
@@ -66,24 +66,42 @@
                       p.py-2 - Proficient: Ruby on Rails, Vue/Vuex
                       p.py-2 - Intermediate: Git, NodeJS + Express
 
-          v-row#experience.mb-5.justify-center.big-gap
+          v-row#education.mb-5.justify-center.big-gap
             v-col(cols="12")
-              h1.font-weight-black(style="font-size:3rem;") Experience
+              h1.font-weight-black(style="font-size:3rem;") Education
             
           v-row.justify-center
             v-col(cols="12" lg="10" xl="8")
               v-card(flat rounded outlined)
                 v-row(no-gutters)
-                  v-col.education(cols="12" md="6")
-                    div.font-weight-bold.py-6.text-color(style="font-size:2.4rem;") Education
-                    .text-left.px-4.px-md-8
+                  v-col.education(cols="12")
+                    .text-left.px-4.px-md-8.py-6
                       .text-color.font-weight-bold(style="font-size:1.6rem;") National University of Singapore
                       v-card-subtitle.px-0.text-h6.font-italic.py-2 July 2018 - present
                       p.py-2 - Currently pursuing a Bachelor of Computing (Computer Science) (Honours) with specialization in Software Engineering and AI
-                      p.py-2 - Held the role of publicity in my CCA NUS Guitar Ensemble, managed instagram, facebook and youtube accounts
-                  v-col.pb-4(cols="12" md="6")
-                    div.font-weight-bold.py-6.text-color(style="font-size:2.4rem;") Work
-                    .text-left.px-4.px-md-8
+                      p.py-2 - Held the role of publicity in my CCA NUS Guitar Ensemble
+         
+          v-row#work.mb-5.justify-center.big-gap
+            v-col(cols="12")
+              h1.font-weight-black(style="font-size:3rem;") Work Experience
+            
+          v-row.justify-center
+            v-col(cols="12" lg="10" xl="8")
+              v-card(flat rounded outlined)
+                v-row(no-gutters)
+                  v-col.pb-4(cols="12")
+                    .text-left.px-4.px-md-8.py-6
+                      .text-color.font-weight-bold(style="font-size:1.6rem;") Violian - Co-Founder
+                      v-card-subtitle.px-0.py-2.text-h6.font-italic Jun 2020 - Present
+                      p.py-2 - Identified the need of online music teaching amist the COVID situation and took action.
+                      p.py-2 - Earned trust from a senior Singapore Chinese Orchestra percussionist with 20 years of experience in the music industry to be my partner.
+                      p.py-2 - Communicated with my partner and various music tutors to formulate a business model.
+                      p.py-2 - Researched and analysed 10 other similar products to derive at an unique selling point that resonated with our clients(local music tutors).
+                      p.py-2 - Learned new technologies and applied them immediately to implement features such as MPEG-DASH(the algorithm behind YouTube) streaming of video and creating music scores.
+                      p.py-2 - Designed backend APIs using NodeJS and set up the server on Digital Ocean.
+
+                    hr.mx-auto.my-4(style="border:1px solid black; width:16px;")
+                    .text-left.px-4.px-md-8.py-6
                       .text-color.font-weight-bold(style="font-size:1.6rem;") Dateideas - Software Engineer Intern
                       v-card-subtitle.px-0.py-2.text-h6.font-italic Jan 2020 - May 2020
                       p.py-2 - Worked as front end software engineer to implement a full album feature for the company
@@ -99,7 +117,6 @@
             v-col(cols="12")
               h1#recent-works.font-weight-black(style="font-size:3rem;") My Recent Works
 
-          //- computer section
           //- violian
           v-row.justify-center.pt-8(v-if="!isPhone")
             v-col(cols="12" lg="10" xl="8")
