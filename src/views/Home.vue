@@ -4,25 +4,27 @@
       transition(name="slide-fade")
         v-row.my-5.justify-center(v-show="display")
           v-col(cols="12")
-            h1#recent-works.font-weight-black(style="font-size:4rem;") Full-Stack Web Developer
+            div#recent-works.font-weight-black.text-h3.text-md-h2 Full-Stack Web Developer
 
       transition(name="slide-fade")
         div(v-show="display1")
           v-row.justify-center
-            v-col(cols="12" lg="8")
+            v-col(cols="12" md="8")
               v-card
                 v-row.align-center(no-gutters)
+                  v-col.py-0(cols="0" sm="6" v-if="$vuetify.breakpoint.name == 'xs'")
+                    v-img(:src="require('../assets/portrait_short.jpg')" eager)
                   v-col.text-left.align-center(cols="12" sm="6")
                     .px-5
                       v-card-title.text-color.break-word Hi there, nice to meet you
                       v-card-text.text--primary 
-                        div.display-1.text-color I'm Wang Runding, a self-motivated and independent web developer
+                        div.text-h5.text-lg-h4.text-color I'm Wang Runding, a self-motivated and independent web developer
                       v-card-actions
                         v-btn(color='orange' text href="https://drive.google.com/file/d/1a-BNL80qB4i6_hFb66MK7dZcNjnu1qAy/view?usp=sharing")
                           | View My CV
                         v-btn(color='orange' text @click="goToBottom")
                           | Contact Me
-                  v-col.py-0(cols="0" sm="6")
+                  v-col.py-0(cols="0" sm="6" v-if="$vuetify.breakpoint.name == 'sm' || $vuetify.breakpoint.name == 'md' || $vuetify.breakpoint.name == 'lg' || $vuetify.breakpoint.name == 'xl'")
                     v-img(:src="require('../assets/portrait_short.jpg')" eager)
       
       transition(name="slide-fade")
@@ -322,8 +324,6 @@
                         v-icon(left size="22") mdi-link-variant
                         | Visit Site
                       
-          
-
 
 </template>
 
