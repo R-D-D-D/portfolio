@@ -2,9 +2,9 @@
   v-app#app
     transition(name="slide-fade")
       div(v-show="display")
-        v-container
+        v-container(fluid)
           v-row.justify-center
-            v-col(cols="12" lg="10" xl="8")
+            v-col(cols="10" lg="8")
               v-app-bar(
                 light
                 flat
@@ -36,7 +36,7 @@
     transition(name="slide-fade")
       v-footer.mt-16#contact(padless dark v-show="display1")
         v-card.text-center(flat tile color="#1D2640" width="100%")
-          h1.display-2.font-weight-bold.py-10.px-sm-16.px-10(style="word-break:normal;") I would love to hear form you for potential collaborations, contact me at
+          h1.font-weight-bold.py-10.px-sm-16.px-10.text-h4.text-lg-h3(style="word-break:normal;") Interested for collaborations? Reach me at
           v-row
             v-col(cols="12" md="3")
               v-btn.text--white(x-large icon href="https://www.linkedin.com/in/runding-wang/" target="_blank")

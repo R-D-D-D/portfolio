@@ -1,29 +1,31 @@
 <template lang="pug">
   .home
-    v-container
+    v-container(fluid)
       transition(name="slide-fade")
         v-row.my-5.justify-center(v-show="display")
-          v-col(cols="12")
-            div#recent-works.font-weight-black.text-h3.text-md-h2 Full-Stack Web Developer
+          v-col(cols="10" md="8" lg="6")
+            div#recent-works.font-weight-black.text-h3.text-lg-h2 RUNDING WANG
 
       transition(name="slide-fade")
         div(v-show="display1")
           v-row.justify-center
-            v-col(cols="12" md="8")
+            v-col(cols="10" md="8" lg="6")
               v-card
                 v-row.align-center(no-gutters)
                   v-col.py-0(cols="0" sm="6" v-if="$vuetify.breakpoint.name == 'xs'")
                     v-img(:src="require('../assets/portrait_short.jpg')" eager)
                   v-col.text-left.align-center(cols="12" sm="6")
                     .px-5
-                      v-card-title.text-color.break-word Hi there, nice to meet you
                       v-card-text.text--primary 
-                        div.text-h5.text-lg-h4.text-color I'm Wang Runding, a self-motivated and independent web developer
+                        div.text-h5.text-color I'm Runding Wang, a self-motivated and independent web developer
                       v-card-actions
-                        v-btn(color='orange' text href="https://drive.google.com/file/d/1a-BNL80qB4i6_hFb66MK7dZcNjnu1qAy/view?usp=sharing")
-                          | View My CV
-                        v-btn(color='orange' text @click="goToBottom")
-                          | Contact Me
+                        v-row(justify="start")
+                          v-col.py-0(cols="12" md="6")
+                            v-btn(color='orange' text href="https://drive.google.com/file/d/1a-BNL80qB4i6_hFb66MK7dZcNjnu1qAy/view?usp=sharing")
+                              | View My Resume
+                          v-col.py-0(cols="12" md="6")
+                            v-btn(color='orange' text @click="goToBottom")
+                              | Contact Me
                   v-col.py-0(cols="0" sm="6" v-if="$vuetify.breakpoint.name == 'sm' || $vuetify.breakpoint.name == 'md' || $vuetify.breakpoint.name == 'lg' || $vuetify.breakpoint.name == 'xl'")
                     v-img(:src="require('../assets/portrait_short.jpg')" eager)
       
@@ -34,12 +36,12 @@
               h1.font-weight-black(style="font-size:3.6rem;") Skill Set
 
           v-row.justify-center
-            v-col(cols="12" lg="10" xl="8")
+            v-col(cols="10" lg="8")
               v-card(flat rounded outlined)
                 v-row(no-gutters)
                   v-col.pb-4.education(cols="12" md="6")
                     div.font-weight-bold.py-6.text-color(style="font-size:2.4rem;") Designer
-                    div.px-4.px-md-8.text-left I am very interested in photo, video editing and logo design. Although I did not properly learn it, I explore some of the adobe softwares on my own. I use Illustrator to do basic word art like this web page. I used Photoshop and iMovie for marketing materials when I was the publicity secretary. The process was fun.
+                    div.px-4.px-md-8.text-left I am very interested in photo, video editing and logo design. I explore some of the adobe softwares on my own. I use Illustrator to do basic word art like this web page. I used Photoshop and iMovie for marketing materials when I was the publicity secretary. The process was fun.
                     hr.mx-auto.my-4(style="border:1px solid black; width:16px;")
                     .text-left.px-4.px-md-8
                       .text-color.font-weight-bold(style="font-size:1.6rem;") Adobe Softwares
@@ -53,9 +55,14 @@
                       v-btn(icon href="https://www.instagram.com/tv/B8F-KbtFGHN/?utm_source=ig_web_button_share_sheet" target="_blank" color="#2c3e50")
                         v-icon mdi-youtube
 
+                    hr.mx-auto.my-4(style="border:1px solid black; width:16px;")
+                    .text-left.px-4.px-md-8
+                      .text-color.font-weight-bold(style="font-size:1.6rem;") Mock-up Tools
+                      div.py-2 - Proficient: Figma
+
                   v-col.pb-4(cols="12" md="6")
                     div.font-weight-bold.py-6.text-color(style="font-size:2.4rem;") Developer
-                    div.px-4.px-md-8.text-left I like to build useful softwares that solves problem around me. Aside from school work, I have done quite a few personal projects which allow me to be familiarize with popular frameworks like Rails, Vuejs and Nodejs. From these experience I lauched my own startup Violian, a web app done using Nodejs and Vuejs that involve some video processing.
+                    div.px-4.px-md-8.text-left I like to build useful softwares that solves problems. Aside from school work, I have done quite a few personal projects which allow me to be familiarized with popular frameworks like Rails, Vuejs and Nodejs. From these experience I lauched my own startup Violian, a web app done using Nodejs and Vuejs that involve some video processing.
                     hr.mx-auto.my-4(style="border:1px solid black; width:16px;")
                     .text-left.px-4.px-md-8
                       .text-color.font-weight-bold(style="font-size:1.6rem;") Languages
@@ -73,7 +80,7 @@
               h1.font-weight-black(style="font-size:3rem;") Education
             
           v-row.justify-center
-            v-col(cols="12" lg="10" xl="8")
+            v-col(cols="10" lg="8")
               v-card(flat rounded outlined)
                 v-row(no-gutters)
                   v-col.education(cols="12")
@@ -88,7 +95,7 @@
               h1.font-weight-black(style="font-size:3rem;") Work Experience
             
           v-row.justify-center
-            v-col(cols="12" lg="10" xl="8")
+            v-col(cols="10" lg="8")
               v-card(flat rounded outlined)
                 v-row(no-gutters)
                   v-col.pb-4(cols="12")
@@ -121,7 +128,7 @@
 
           //- violian
           v-row.justify-center.pt-8(v-if="!isPhone")
-            v-col(cols="12" lg="10" xl="8")
+            v-col(cols="12" md="10" lg="8")
               v-sheet.elevation-10.card(style="position:relative; height:0; padding-bottom:31.25%;" ref="cardWrapper")
                 img.elevation-10(:src="require('../assets/violian.jpg')" width="50%" :style="imgStyle")
                 div(style="position:absolute; bottom:20px; left:calc(50% + 44px);")
@@ -145,7 +152,7 @@
 
           //- rhythm master
           v-row.justify-center.pt-8(v-if="!isPhone")
-            v-col(cols="12" lg="10" xl="8")
+            v-col(cols="12" md="10" lg="8")
               v-sheet.elevation-10.card(style="position:relative; height:0; padding-bottom:31.25%;")
                 img.elevation-10(:src="require('../assets/rhythm_master.jpg')" width="50%" :style="imgStyle")
                 div(style="position:absolute; bottom:20px; left:calc(50% + 44px);")
@@ -166,7 +173,7 @@
 
           //- dateideas intern
           v-row.justify-center.pt-8(v-if="!isPhone")
-            v-col(cols="12" lg="10" xl="8")
+            v-col(cols="12" md="10" lg="8")
               v-sheet.elevation-10.card(style="position:relative; height:0; padding-bottom:31.25%;")
                 img.elevation-10(:src="require('../assets/dateideas.jpg')" width="50%" :style="imgStyle")
                 div(style="position:absolute; bottom:20px; left:calc(50% + 44px);")
@@ -187,7 +194,7 @@
           
           //- genus website
           v-row.justify-center.pt-8(v-if="!isPhone")
-            v-col(cols="12" lg="10" xl="8")
+            v-col(cols="12" md="10" lg="8")
               v-sheet.elevation-10.card(style="position:relative; height:0; padding-bottom:31.25%;")
                 img.elevation-10(:src="require('../assets/nusguitarensemble.jpg')" width="50%" :style="imgStyle")
                 div(style="position:absolute; bottom:20px; left:calc(50% + 44px);")
@@ -211,7 +218,7 @@
           
           //- music academy
           v-row.justify-center.pt-8(v-if="!isPhone")
-            v-col(cols="12" lg="10" xl="8")
+            v-col(cols="12" md="10" lg="8")
               v-sheet.elevation-10.card(style="position:relative; height:0; padding-bottom:31.25%;")
                 img.elevation-10(:src="require('../assets/music_academy.jpg')" width="50%" :style="imgStyle")
                 div(style="position:absolute; bottom:20px; left:calc(50% + 44px);")
@@ -236,7 +243,7 @@
           //- begin of phone section
           v-row.justify-center(v-if="isPhone")
             //- violian
-            v-col(cols="12")
+            v-col(cols="10" sm="6")
               v-card.elevation-12(rounded)
                 v-img.img-border(:src="require('../assets/violian.jpg')" eager)
                 v-container.py-0
@@ -255,7 +262,7 @@
                         | Visit Site
 
             //- rhythm master
-            v-col(cols="12")
+            v-col(cols="10" sm="6")
               v-card.elevation-12(rounded)
                 v-img.img-border(:src="require('../assets/rhythm_master.jpg')" eager)
                 v-container.py-0
@@ -263,7 +270,7 @@
                     v-col(cols="12") 
                       h1.font-weight-black(style="font-size: 1.8rem;") Rhythm Master
                       div.font-weight-black(style="color: #616161;") .NET &#183; C#
-                      div.font-weight-medium.pt-2 A windows form app to programatically analyse a piece of rhythm played by student against the solution
+                      div.font-weight-medium.pt-2 A windows form app to programatically analyse a piece of rhythm played by student against the solution. Automatically generates feedback on student's wrong notes.
                   v-row
                     v-col
                       v-btn(outlined href="https://github.com/R-D-D-D/Ground-Zero/tree/master/waveform_processing" target="_blank" color="#2c3e50")
@@ -271,7 +278,7 @@
                         | Github
             
             //- dateideas
-            v-col(cols="12")
+            v-col(cols="10" sm="6")
               v-card.elevation-12(rounded)
                 v-img.img-border(:src="require('../assets/dateideas.jpg')" eager)
                 v-container.py-0
@@ -287,7 +294,7 @@
                         | Gitlab
 
             //- genus
-            v-col(cols="12")
+            v-col(cols="10" sm="6")
               v-card.elevation-12(rounded)
                 v-img.img-border(:src="require('../assets/nusguitarensemble.jpg')" eager)
                 v-container.py-0
@@ -306,7 +313,7 @@
                         | Visit Site
             
             //- music academy
-            v-col(cols="12")
+            v-col(cols="10" sm="6")
               v-card.elevation-12(rounded)
                 v-img.img-border(:src="require('../assets/music_academy.jpg')" eager)
                 v-container.py-0
@@ -387,7 +394,7 @@ export default {
 }
 
 .big-gap {
-  margin-top: 10rem;
+  margin-top: 2rem;
 }
 
 p {
