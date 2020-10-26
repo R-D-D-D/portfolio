@@ -21,7 +21,7 @@
                       v-card-actions
                         v-row(justify="start")
                           v-col.py-0(cols="12" md="6")
-                            v-btn(color='orange' text href="https://drive.google.com/file/d/1a-BNL80qB4i6_hFb66MK7dZcNjnu1qAy/view?usp=sharing")
+                            v-btn(color='orange' text href="https://drive.google.com/file/d/1kQf5NW-4dk9KoNTZIiZ_SLnG-lIFh5Xm/view?usp=sharing")
                               | View My Resume
                           v-col.py-0(cols="12" md="6")
                             v-btn(color='orange' text @click="goToBottom")
@@ -33,7 +33,7 @@
         div(v-show="display1")
           v-row#skill.mb-5.justify-center.big-gap(v-show="display1")
             v-col(cols="12")
-              h1.font-weight-black(style="font-size:3.6rem;") Skill Set
+              h1.font-weight-black.text-h3.text-lg-h2 Skill Set
 
           v-row.justify-center
             v-col(cols="10" lg="8")
@@ -77,7 +77,7 @@
 
           v-row#education.mb-5.justify-center.big-gap
             v-col(cols="12")
-              h1.font-weight-black(style="font-size:3rem;") Education
+              h1.font-weight-black.text-h3.text-lg-h2 Education
             
           v-row.justify-center
             v-col(cols="10" lg="8")
@@ -92,7 +92,7 @@
          
           v-row#work.mb-5.justify-center.big-gap
             v-col(cols="12")
-              h1.font-weight-black(style="font-size:3rem;") Work Experience
+              h1.font-weight-bold.text-h3.text-lg-h2 Work Experience
             
           v-row.justify-center
             v-col(cols="10" lg="8")
