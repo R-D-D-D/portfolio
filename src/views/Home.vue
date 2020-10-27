@@ -12,22 +12,20 @@
             v-col(cols="10" md="8" lg="6")
               v-card
                 v-row.align-center(no-gutters)
-                  v-col.py-0(cols="0" sm="6" v-if="$vuetify.breakpoint.name == 'xs'")
-                    v-img(:src="require('../assets/portrait_short.jpg')" eager)
+                  v-col.py-0(cols="0" sm="6")
+                    v-img(:src="require('../assets/rd_photo.jpg')" eager)
                   v-col.text-left.align-center(cols="12" sm="6")
                     .px-5
                       v-card-text.text--primary 
-                        div.text-h5.text-color I'm Runding Wang, a self-motivated and independent web developer
+                        div.text-h5.text-color I'm Runding Wang, a self-motivated and independent software engineer
                       v-card-actions
                         v-row(justify="start")
                           v-col.py-0(cols="12" md="6")
-                            v-btn(color='orange' text href="https://drive.google.com/file/d/1kQf5NW-4dk9KoNTZIiZ_SLnG-lIFh5Xm/view?usp=sharing")
+                            v-btn(small color='orange' text href="https://drive.google.com/file/d/1kQf5NW-4dk9KoNTZIiZ_SLnG-lIFh5Xm/view?usp=sharing")
                               | View My Resume
                           v-col.py-0(cols="12" md="6")
-                            v-btn(color='orange' text @click="goToBottom")
+                            v-btn(color='orange' text @click="goToBottom" small)
                               | Contact Me
-                  v-col.py-0(cols="0" sm="6" v-if="$vuetify.breakpoint.name == 'sm' || $vuetify.breakpoint.name == 'md' || $vuetify.breakpoint.name == 'lg' || $vuetify.breakpoint.name == 'xl'")
-                    v-img(:src="require('../assets/portrait_short.jpg')" eager)
       
       transition(name="slide-fade")
         div(v-show="display1")
@@ -72,8 +70,13 @@
                     hr.mx-auto.my-4(style="border:1px solid black; width:16px;")
                     .text-left.px-4.px-md-8
                       .text-h5.text-color.font-weight-bold Frameworks
-                      p.py-2 - Proficient: Ruby on Rails, Vue/Vuex
-                      p.py-2 - Intermediate: Git, NodeJS + Express
+                      p.py-2 - Proficient: Ruby on Rails, Vue/Vuex, NodeJS + Express
+                      p.py-2 - Intermediate: Git, React
+                    hr.mx-auto.my-4(style="border:1px solid black; width:16px;")
+                    .text-left.px-4.px-md-8
+                      .text-h5.text-color.font-weight-bold Website maintenance
+                      p.py-2 - Proficient: AWS(EC2, RDS), Digital Ocean, SSL
+                      p.py-2 - Intermediate: SEO, Google web console
 
           v-row#education.mb-5.justify-center.big-gap
             v-col(cols="12")

@@ -45,7 +45,7 @@
             v-col(cols="12" md="3")
               v-btn(x-large icon href="mailto:wangrunding@gmail.com")
                 v-icon(x-large) mdi-email
-              | wangrunding@gmail.com
+              | runding.wang@u.nus.edu
             v-col(cols="12" md="3")
               v-btn(large icon href="https://github.com/R-D-D-D" target="_blank")
                 v-icon(x-large) mdi-github
