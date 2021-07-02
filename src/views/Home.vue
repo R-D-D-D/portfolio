@@ -103,6 +103,16 @@
                 v-row(no-gutters)
                   v-col.pb-4(cols="12")
                     .text-left.px-4.px-md-8.py-6
+                      .text-color.font-weight-bold(style="font-size:1.6rem;") Hunterz.io - Software Engineer Intern
+                      v-card-subtitle.px-0.py-2.text-h6.font-italic Jan 2021 - Jul 2021
+                      p.py-2 - Built the first test suite for the application using Selenium, a totally foreign framework.
+                      p.py-2 - Picked up SQL independently via researching for daily tasks.
+                      p.py-2 - Took over a very large codebase and restructured components to reduce complexicity of the code.
+                      p.py-2 - Communicated UI design using Zeplin with UI expert and implement according to blurprint.
+                      p.py-2 - Integrated multiple external services such as Hubspot, Calendly and Mailchimp.
+                      
+                    hr.mx-auto.my-4(style="border:1px solid black; width:16px;")
+                    .text-left.px-4.px-md-8.py-6
                       .text-color.font-weight-bold(style="font-size:1.6rem;") Violian - Co-Founder
                       v-card-subtitle.px-0.py-2.text-h6.font-italic Jun 2020 - Present
                       p.py-2 - Identified the need of online music teaching amist the COVID situation and took action.
