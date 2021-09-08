@@ -21,7 +21,7 @@
                       v-card-actions
                         v-row(justify="start")
                           v-col.py-0(cols="12" md="6")
-                            v-btn(small color='orange' text href="https://drive.google.com/file/d/1kQf5NW-4dk9KoNTZIiZ_SLnG-lIFh5Xm/view?usp=sharing")
+                            v-btn(small color='orange' text href="https://drive.google.com/file/d/1eeejrUWSkC7Qym0P4UrSr78uJoIYfLqk/view?usp=sharing")
                               | View My Resume
                           v-col.py-0(cols="12" md="6")
                             v-btn(color='orange' text @click="goToBottom" small)
@@ -102,6 +102,14 @@
               v-card(flat rounded outlined)
                 v-row(no-gutters)
                   v-col.pb-4(cols="12")
+                    .text-left.px-4.px-md-8.py-6
+                      .text-color.font-weight-bold(style="font-size:1.6rem;") Outlaw - Software Engineer Intern
+                      v-card-subtitle.px-0.py-2.text-h6.font-italic Aug 2021 - present
+                      p.py-2 - Picked up new framework Cypress and designed test suites for various features.
+                      p.py-2 - Upgraded code using docx library from version 4.4.1 to 6.0.3 after two years since it was written.
+                      p.py-2 - Learnt about Firebase and Webpack.
+
+                    hr.mx-auto.my-4(style="border:1px solid black; width:16px;")
                     .text-left.px-4.px-md-8.py-6
                       .text-color.font-weight-bold(style="font-size:1.6rem;") Hunterz.io - Software Engineer Intern
                       v-card-subtitle.px-0.py-2.text-h6.font-italic Jan 2021 - Jul 2021
